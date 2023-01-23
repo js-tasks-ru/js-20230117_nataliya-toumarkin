@@ -6,10 +6,10 @@
  */
 
 const arr = [
-  "Детский велосипед Lexus Trike Racer Trike",
   "Соска (пустышка) NUK 10729357",
-  "Соска (пустышка) Philips SCF182/12",
   "ТВ тюнер D-COLOR  DC1301HD",
+  "Детский велосипед Lexus Trike Racer Trike",
+  "Соска (пустышка) Philips SCF182/12",
   "Powerbank аккумулятор Hiper SP20000",
 ];
 
