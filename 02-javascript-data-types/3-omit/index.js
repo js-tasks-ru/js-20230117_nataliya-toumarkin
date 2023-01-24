@@ -4,6 +4,23 @@
  * @param {...string} fields - the properties paths to omit
  * @returns {object} - returns the new object
  */
-export const omit = (obj, ...fields) => {
 
+const obj = {
+  apple: 2,
+  orange: 4,
+  banana: 3,
 };
+
+export const omit = (obj, ...fields) => {
+  const res = {};
+
+  Object.entries(obj).forEach(([key, value]) => {
+    if (!fields.includes(key)) {
+      res[key] = value;
+    }
+  });
+
+  return res;
+};
+
+console.log(omit(obj, "apple", "banana"));
