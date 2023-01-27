@@ -5,23 +5,17 @@
  * @returns {string[]}
  */
 
-const arr = [
-  "Соска (пустышка) NUK 10729357",
-  "ТВ тюнер D-COLOR  DC1301HD",
-  "Детский велосипед Lexus Trike Racer Trike",
-  "Соска (пустышка) Philips SCF182/12",
-  "Powerbank аккумулятор Hiper SP20000",
-];
-
 export function sortStrings(arr, param = "asc") {
-  const arrSort = arr
-    .slice()
-    .sort((a, b) => a.localeCompare(b, "ru", { caseFirst: "upper" }));
-  if (param === "asc") {
-    return arrSort;
-  } else {
-    return arrSort.reverse();
-  }
+  const compare = (a, b) =>
+    a.localeCompare(b, ["ru", "en"], { caseFirst: "upper" });
+
+  return [...arr].sort((a, b) => {
+    if (param === "asc") {
+      return compare(a, b);
+    }
+
+    if (param === "desc") {
+      return compare(b, a);
+    }
+  });
 }
-const sorted = sortStrings(arr, "desc");
-console.log(sorted);

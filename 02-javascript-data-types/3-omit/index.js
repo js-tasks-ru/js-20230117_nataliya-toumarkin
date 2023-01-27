@@ -5,12 +5,6 @@
  * @returns {object} - returns the new object
  */
 
-const obj = {
-  apple: 2,
-  orange: 4,
-  banana: 3,
-};
-
 export const omit = (obj, ...fields) => {
   const res = {};
 
@@ -22,5 +16,3 @@ export const omit = (obj, ...fields) => {
 
   return res;
 };
-
-console.log(omit(obj, "apple", "banana"));
